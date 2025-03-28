@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FedEx - Logistics Company</title>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+   
+  
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adminstyle.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/customerdashboard.css' %}" />
+
+    <style>
+        #blink {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <h2>Fed<span class="danger">Ex</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="/admindashboard/" class="active">
+            <span class="material-icons-sharp"> dashboard </span>
+
+            <h3>Home</h3>
+          </a>
+          <a href="{% url 'all_vehicle' %}">
+            <span class="material-icons-sharp"> person_outline </span>
+            <h3>All Vehicles</h3>
+          </a>
+          <a href="{% url 'all_driver' %}">
+            <span class="material-icons-sharp"> receipt_long </span>
+            <h3>All Drivers</h3>
+          </a>
+          <a href="{% url 'all_consignment' %}">
+            <span class="material-icons-sharp"> insights </span>
+            <h3>All Consignments</h3>
+          </a>
+
+          <a href="{% url 'report' %}">
+            <span class="material-icons-sharp">insights </span>
+            <h3>Report</h3>
+          </a>
+          <a href="{% url 'customlogout' %}">
+            <span class="material-icons-sharp"> logout </span>
+            <h3>Logout</h3>
+          </a>
+         
+          <a href="#">
+          </a>
+        </div>
+      </aside>
+
+      <main>
+        <h1>Dashboard</h1>
+
+        <p id="blink">
+           !! Welcome Admin !!
+        </p>
+
+        <div class="insights">
+          <!-- SALES -->
+          <div class="sales">
+            <span class="material-icons-sharp"> analytics </span>
+            <div class="middle">
+              <div class="left">
+                <h3>Total Sales</h3>
+                <h1>$25,024</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>81%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted"> Last 24 hours </small>
+          </div>
+
+          <!-- EXPENSES -->
+          <div class="expenses">
+            <span class="material-icons-sharp"> bar_chart </span>
+            <div class="middle">
+              <div class="left">
+                <h3>Total Expenses</h3>
+                <h1>$14,160</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>62%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted"> Last 24 hours </small>
+          </div>
+
+          <!-- INCOME -->
+          <div class="income">
+            <span class="material-icons-sharp"> stacked_line_chart </span>
+            <div class="middle">
+              <div class="left">
+                <h3>Total Income</h3>
+                <h1>$10,864</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>44%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted"> Last 24 hours </small>
+          </div>
+
+        </div>
+
+        
+
+      </main>
+      
+      <script type="text/javascript">
+        let blink =
+            document.getElementById('blink');
+
+        setInterval(function () {
+            blink.style.opacity =
+                (blink.style.opacity == 0 ? 1 : 0);
+        }, 1000); 
+    </script>
+   
+
+    <script src="{% static 'constants/recent-order-data.js' %}"></script>
+    <script src="{% static 'constants/update-data.js' %}"></script>
+    <script src="{% static 'constants/sales-analytics-data.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+  </body>
+</html>

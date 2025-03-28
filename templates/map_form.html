@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Locations</title>
+</head>
+<body>
+    <h2>Enter Sender and Receiver Locations</h2>
+    <form method="get" action="{% url 'map-page' %}">
+        <label>Sender Address:</label><br>
+        <input type="text" name="sender_address" required><br><br>
+
+        <label>Receiver Address:</label><br>
+        <input type="text" name="receiver_address" required><br><br>
+
+        <button type="submit">Show Map</button>
+    </form>
+</body>
+</html>

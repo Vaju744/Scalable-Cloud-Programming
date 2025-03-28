@@ -1,0 +1,796 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "TLMS.asgi",
+        "description": "TLMS.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "TLMS.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-ogcqt=-)1vy&^a0p7*w%=7a@$ul4!f^8**9lgf$ch^87z1o=9j'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False  # Set to False in production\nALLOWED_HOSTS = [\"*\"]  # Publicly accessible. Use specific domains for production.\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-ogcqt=-)1vy&^a0p7*w%=7a@$ul4!f^8**9lgf$ch^87z1o=9j'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False  # Set to False in production\nALLOWED_HOSTS = [\"*\"]  # Publicly accessible. Use specific domains for production.\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "DEBUG = False  # Set to False in production\nALLOWED_HOSTS = [\"*\"]  # Publicly accessible. Use specific domains for production.\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "ALLOWED_HOSTS = [\"*\"]  # Publicly accessible. Use specific domains for production.\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'TLMS_app',",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'TLMS_app',\n    # Custom app\n]",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "ROOT_URLCONF = 'TLMS.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'TLMS.wsgi.application'\n# Database configuration\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\nAUTH_PASSWORD_VALIDATORS = [",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'Asia/Kolkata'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n#STATIC_ROOT = BASE_DIR / 'staticfiles'\n# Collected static files directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Additional static files directory",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "TIME_ZONE = 'Asia/Kolkata'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n#STATIC_ROOT = BASE_DIR / 'staticfiles'\n# Collected static files directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Additional static files directory\n# Media files",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n#STATIC_ROOT = BASE_DIR / 'staticfiles'\n# Collected static files directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Additional static files directory\n# Media files\nMEDIA_URL = '/media/'",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n#STATIC_ROOT = BASE_DIR / 'staticfiles'\n# Collected static files directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Additional static files directory\n# Media files\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n#STATIC_ROOT = BASE_DIR / 'staticfiles'\n# Collected static files directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Additional static files directory\n# Media files\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n#STATIC_ROOT = BASE_DIR / 'staticfiles'\n# Collected static files directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Additional static files directory\n# Media files\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#STATIC_ROOT",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "#STATIC_ROOT = BASE_DIR / 'staticfiles'\n# Collected static files directory\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Additional static files directory\n# Media files\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Additional static files directory\n# Media files\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "TLMS.settings",
+        "description": "TLMS.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "TLMS.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "TLMS.urls",
+        "description": "TLMS.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('TLMS_app.urls')),\n]",
+        "detail": "TLMS.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "TLMS.wsgi",
+        "description": "TLMS.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "TLMS.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "TLMS_app.migrations.0001_initial",
+        "description": "TLMS_app.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='UserDetail',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "TLMS_app.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "TLMS_app.migrations.0002_vehicle_driver_consignment",
+        "description": "TLMS_app.migrations.0002_vehicle_driver_consignment",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('TLMS_app', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Vehicle',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "TLMS_app.migrations.0002_vehicle_driver_consignment",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "TLMS_app.migrations.0003_vehicle_image",
+        "description": "TLMS_app.migrations.0003_vehicle_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('TLMS_app', '0002_vehicle_driver_consignment'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='vehicle',\n            name='image',\n            field=models.ImageField(blank=True, null=True, upload_to='vehicle_images/'),\n        ),",
+        "detail": "TLMS_app.migrations.0003_vehicle_image",
+        "documentation": {}
+    },
+    {
+        "label": "TlmsAppConfig",
+        "kind": 6,
+        "importPath": "TLMS_app.apps",
+        "description": "TLMS_app.apps",
+        "peekOfCode": "class TlmsAppConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'TLMS_app'",
+        "detail": "TLMS_app.apps",
+        "documentation": {}
+    },
+    {
+        "label": "UserDetail",
+        "kind": 6,
+        "importPath": "TLMS_app.models",
+        "description": "TLMS_app.models",
+        "peekOfCode": "class UserDetail(models.Model):\n    auth_user = models.ForeignKey(User, related_name='auth_user', on_delete=models.CASCADE)\n    fname = models.CharField(max_length=255, blank=True, null=True)\n    lname = models.CharField(max_length=255, blank=True, null=True)\n    username = models.CharField(max_length=255, blank=True, null=True)\n    password = models.CharField(max_length=255, blank=True, null=True)\n    role = models.CharField(max_length=50, blank=True, null=True)\nclass Vehicle(models.Model):\n    vehicle_type = models.CharField(max_length=100)  # e.g., \"Truck\", \"Van\", \"Bus\"\n    make = models.CharField(max_length=100)  # Vehicle manufacturer (e.g., Toyota, Ford)",
+        "detail": "TLMS_app.models",
+        "documentation": {}
+    },
+    {
+        "label": "Vehicle",
+        "kind": 6,
+        "importPath": "TLMS_app.models",
+        "description": "TLMS_app.models",
+        "peekOfCode": "class Vehicle(models.Model):\n    vehicle_type = models.CharField(max_length=100)  # e.g., \"Truck\", \"Van\", \"Bus\"\n    make = models.CharField(max_length=100)  # Vehicle manufacturer (e.g., Toyota, Ford)\n    model = models.CharField(max_length=100)  # Vehicle model (e.g., Corolla, F-150)\n    year = models.IntegerField()  # Year of manufacture\n    license_plate = models.CharField(max_length=20, unique=True)  # License plate number\n    capacity = models.IntegerField()  # Vehicle capacity (e.g., number of parcels it can carry)\n    image = models.ImageField(upload_to='vehicle_images/', null=True, blank=True)  # Image field for vehicle photo\n    created_at = models.DateTimeField(auto_now_add=True)  # Date and time of vehicle entry\n    created_by = models.ForeignKey(User, related_name='auth_user1', on_delete=models.CASCADE)",
+        "detail": "TLMS_app.models",
+        "documentation": {}
+    },
+    {
+        "label": "Driver",
+        "kind": 6,
+        "importPath": "TLMS_app.models",
+        "description": "TLMS_app.models",
+        "peekOfCode": "class Driver(models.Model):\n    first_name = models.CharField(max_length=100)\n    last_name = models.CharField(max_length=100)\n    license_number = models.CharField(max_length=50, unique=True)  # Driver's license number\n    phone_number = models.CharField(max_length=15)\n    email = models.EmailField()\n    created_at = models.DateTimeField(auto_now_add=True)  # Date and time of vehicle entry\n    created_by = models.ForeignKey(User, related_name='auth_user3', on_delete=models.CASCADE)\n    updated_at = models.DateTimeField(auto_now_add=True)  # Date and time of vehicle entry\n    updated_by = models.ForeignKey(User, related_name='auth_user4', on_delete=models.CASCADE)",
+        "detail": "TLMS_app.models",
+        "documentation": {}
+    },
+    {
+        "label": "Consignment",
+        "kind": 6,
+        "importPath": "TLMS_app.models",
+        "description": "TLMS_app.models",
+        "peekOfCode": "class Consignment(models.Model):\n    sender_name = models.CharField(max_length=100)  # Name of the sender\n    receiver_name = models.CharField(max_length=100)  # Name of the receiver\n    sender_address = models.TextField()  # Sender's address\n    receiver_address = models.TextField()  # Receiver's address\n    weight = models.FloatField()  # Weight of the consignment in kg\n    contents = models.TextField()  # Description of the contents\n    status = models.CharField(max_length=50, null=True)\n    vehicle = models.ForeignKey('Vehicle', on_delete=models.SET_NULL, null=True, related_name=\"consignments\")  # Vehicle transporting the consignment\n    driver = models.ForeignKey('Driver', on_delete=models.SET_NULL, null=True, related_name=\"consignments\")  # Driver handling the consignment",
+        "detail": "TLMS_app.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "TLMS_app.urls",
+        "description": "TLMS_app.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('login_register/', views.login_register, name='login_register'),\n    path('customerlogin/', views.customerlogin, name='customerlogin'),\n    path('customerregister/',views.customerregister, name='customerregister'),\n    path('customerdashboard/',views.customerdashboard, name='customerdashboard'),\n    path('logout/', views.customlogout, name='customlogout'),\n    path('vehicle_index/',views.vehicle_index, name='vehicle_index'),\n    path('vehicle_create/',views.vehicle_create, name='vehicle_create'),\n    path('vehicle_edit/<int:id>/',views.vehicle_edit, name='vehicle_edit'),",
+        "detail": "TLMS_app.urls",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def index(request):\n    return render(request,'index.html') \ndef login_register(request):\n    return render(request,'login_register.html')\ndef customerlogin(request):\n    if request.method == \"POST\":\n        username = request.POST['username']\n        password = request.POST['password']\n        user = authenticate(request, username=username, password=password)\n        if user is not None:",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "login_register",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def login_register(request):\n    return render(request,'login_register.html')\ndef customerlogin(request):\n    if request.method == \"POST\":\n        username = request.POST['username']\n        password = request.POST['password']\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            # Check the role from the user's profile",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "customerlogin",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def customerlogin(request):\n    if request.method == \"POST\":\n        username = request.POST['username']\n        password = request.POST['password']\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            # Check the role from the user's profile\n            try:\n                auth_id=User.objects.get(username=username).id",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "customerregister",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def customerregister(request):\n    if request.method == \"POST\":\n        username = request.POST['username']\n        email = request.POST['email']\n        password = request.POST['password']\n        fname = request.POST['fname']  # Optional field\n        lname = request.POST['lname']  # Optional field\n        role = request.POST.get('role', 'Customer')  # Default role is 'Customer'\n        user = User.objects.create_user(username=username, email=email, password=password)\n        # Create the associated UserDetail object",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "customerdashboard",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def customerdashboard(request):\n    driver_count = Driver.objects.filter(created_by_id=request.user.id).count()\n    vehicle_count = Vehicle.objects.filter(created_by_id=request.user.id).count()\n    ongoing_consignment_count = Consignment.objects.filter(status='Pending').filter(created_by_id=request.user.id).count()\n    approved_consignment_count = Consignment.objects.filter(status='Approved').filter(created_by_id=request.user.id).count()\n    compact = {'driver_count':driver_count, 'vehicle_count':vehicle_count,'ongoing_consignment_count':ongoing_consignment_count,'approved_consignment_count':approved_consignment_count}\n    return render(request, 'customerdashboard.html',compact)\ndef customlogout(request):\n    # Log out the user\n    logout(request)",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "customlogout",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def customlogout(request):\n    # Log out the user\n    logout(request)\n    # Redirect to a desired page after logout\n    return redirect('/')  # Replace 'home' with the name of the URL you want to redirect to\ndef vehicle_index(request):\n    data=Vehicle.objects.filter(created_by_id=request.user.id).all()\n    compact={'data':data}\n    return render(request, 'vehicle/index.html',compact)\ndef vehicle_create(request):",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "vehicle_index",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def vehicle_index(request):\n    data=Vehicle.objects.filter(created_by_id=request.user.id).all()\n    compact={'data':data}\n    return render(request, 'vehicle/index.html',compact)\ndef vehicle_create(request):\n    if request.method == \"POST\":\n        vehicle_type = request.POST['vehicle_type']\n        make = request.POST['make']\n        model = request.POST['model']\n        year = request.POST['year']",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "vehicle_create",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def vehicle_create(request):\n    if request.method == \"POST\":\n        vehicle_type = request.POST['vehicle_type']\n        make = request.POST['make']\n        model = request.POST['model']\n        year = request.POST['year']\n        capacity = request.POST['capacity']\n        license_plate = request.POST['license_plate']  # Optional field\n        image = request.FILES['image']  # Optional field\n        current_date = timezone.now()",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "vehicle_edit",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def vehicle_edit(request,id):\n    vehicle = get_object_or_404(Vehicle, id=id)\n    current_date = timezone.now()\n    user = request.user\n    if request.method == 'POST':\n        vehicle.vehicle_type = request.POST['vehicle_type']\n        vehicle.model = request.POST['model']\n        vehicle.license_plate = request.POST['license_plate']\n        vehicle.make = request.POST['make']\n        vehicle.year = request.POST['year']",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "driver_index",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def driver_index(request):\n    data=Driver.objects.filter(created_by_id=request.user.id).all()\n    compact={'data':data}\n    return render(request, 'driver/index.html',compact)\ndef driver_create(request):\n    if request.method == \"POST\":\n        first_name = request.POST['first_name']\n        last_name = request.POST['last_name']\n        email = request.POST['email']\n        phone_number = request.POST['phone_number']",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "driver_create",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def driver_create(request):\n    if request.method == \"POST\":\n        first_name = request.POST['first_name']\n        last_name = request.POST['last_name']\n        email = request.POST['email']\n        phone_number = request.POST['phone_number']\n        license_number = request.POST['license_number']\n        current_date = timezone.now()\n        user = request.user\n        driver = Driver.objects.create(",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "consignment_index",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def consignment_index(request):\n    data=Consignment.objects.filter(created_by_id=request.user.id).all()\n    compact={'data':data}\n    return render(request, 'consignment/index.html',compact)\ndef consignment_create(request):\n    current_date = timezone.now()\n    user = request.user\n    if request.method == \"POST\":\n        sender_name = request.POST['sender_name']\n        receiver_name = request.POST['receiver_name']",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "consignment_create",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def consignment_create(request):\n    current_date = timezone.now()\n    user = request.user\n    if request.method == \"POST\":\n        sender_name = request.POST['sender_name']\n        receiver_name = request.POST['receiver_name']\n        weight = request.POST['weight']\n        vehicle = request.POST['vehicle']\n        dispatch_date = request.POST['dispatch_date']\n        status = request.POST['status']",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "consignment_edit",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def consignment_edit(request, id):\n    consignment = get_object_or_404(Consignment, id=id)\n    vehicles = Vehicle.objects.all()\n    drivers = Driver.objects.all()\n    if request.method == \"POST\":\n        consignment.sender_name = request.POST['sender_name']\n        consignment.receiver_name = request.POST['receiver_name']\n        consignment.sender_address = request.POST['sender_address']\n        consignment.receiver_address = request.POST['receiver_address']\n        consignment.weight = request.POST['weight']",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "consignment_show",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def consignment_show(request, id):\n    consignment = get_object_or_404(Consignment, id=id)\n    context = {\n        'consignment': consignment,\n    }\n    return render(request, 'consignment/show.html', context)\ndef admindashboard(request):\n    return render(request,'admin/admindashboard.html')\ndef all_vehicle(request):\n    data=Vehicle.objects.all()",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "admindashboard",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def admindashboard(request):\n    return render(request,'admin/admindashboard.html')\ndef all_vehicle(request):\n    data=Vehicle.objects.all()\n    compact={'data':data}\n    return render(request, 'admin/all_vehicle.html',compact)\ndef all_driver(request):\n    data=Driver.objects.all()\n    compact={'data':data}\n    return render(request, 'admin/all_driver.html',compact)",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "all_vehicle",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def all_vehicle(request):\n    data=Vehicle.objects.all()\n    compact={'data':data}\n    return render(request, 'admin/all_vehicle.html',compact)\ndef all_driver(request):\n    data=Driver.objects.all()\n    compact={'data':data}\n    return render(request, 'admin/all_driver.html',compact)\ndef all_consignment(request):\n    data=Consignment.objects.all()",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "all_driver",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def all_driver(request):\n    data=Driver.objects.all()\n    compact={'data':data}\n    return render(request, 'admin/all_driver.html',compact)\ndef all_consignment(request):\n    data=Consignment.objects.all()\n    compact={'data':data}\n    return render(request, 'admin/all_consignment.html',compact)\ndef report(request):\n    current_year = datetime.now().year",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "all_consignment",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def all_consignment(request):\n    data=Consignment.objects.all()\n    compact={'data':data}\n    return render(request, 'admin/all_consignment.html',compact)\ndef report(request):\n    current_year = datetime.now().year\n    data = Consignment.objects.filter(dispatch_date__year=current_year).values('dispatch_date__month', 'status').annotate(count=Count('id')).order_by('dispatch_date__month')\n    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']\n    pending_counts = [0] * 12\n    approved_counts = [0] * 12",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "report",
+        "kind": 2,
+        "importPath": "TLMS_app.views",
+        "description": "TLMS_app.views",
+        "peekOfCode": "def report(request):\n    current_year = datetime.now().year\n    data = Consignment.objects.filter(dispatch_date__year=current_year).values('dispatch_date__month', 'status').annotate(count=Count('id')).order_by('dispatch_date__month')\n    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']\n    pending_counts = [0] * 12\n    approved_counts = [0] * 12\n    rejected_counts = [0] * 12\n    for entry in data:\n        month_index = entry['dispatch_date__month'] - 1  \n        status = entry['status']",
+        "detail": "TLMS_app.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'TLMS.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]

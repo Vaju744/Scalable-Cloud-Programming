@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FedEx - Logistics Company</title>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+   
+  
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adminstyle.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/customerdashboard.css' %}" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <style>
+        #blink {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <h2>Fed<span class="danger">Ex</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="/admindashboard/" class="active">
+            <span class="material-icons-sharp"> dashboard </span>
+
+            <h3>Home</h3>
+          </a>
+          <a href="{% url 'customlogout' %}">
+            <span class="material-icons-sharp"> logout </span>
+            <h3>Logout</h3>
+          </a>
+         
+          <a href="#">
+          </a>
+        </div>
+      </aside>
+
+      
+      <main>
+
+        
+        <h1>Monthwise Consignment Report</h1><br>
+
+        <canvas id="consignmentChart" width="400" height="200"></canvas>
+        <br>
+        <h1>Type of Vehicles</h1><br>
+
+        <canvas id="vehicleTypeChart" width="200" height="90"></canvas>
+
+        
+        <script>
+            // Data passed from the Django view
+            const months = {{ months|safe }};
+            const pendingCounts = {{ pending_counts|safe }};
+            const approvedCounts = {{ approved_counts|safe }};
+            const rejectedCounts = {{ rejected_counts|safe }};
+            
+            // Creating the bar chart using Chart.js
+            const ctx = document.getElementById('consignmentChart').getContext('2d');
+            const consignmentChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: months,
+                    datasets: [{
+                        label: 'Pending',
+                        data: pendingCounts,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Approved',
+                        data: approvedCounts,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Rejected',
+                        data: rejectedCounts,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+        </script>
+
+            <script>
+                const vehicleTypes = {{ vehicle_types|safe }};
+                const vehicleCounts = {{ vehicle_counts|safe }};
+            
+                // Creating the pie chart using Chart.js
+                const ctx1 = document.getElementById('vehicleTypeChart').getContext('2d');
+                const vehicleTypeChart = new Chart(ctx1, {
+                    type: 'pie',
+                    data: {
+                        labels: vehicleTypes,
+                        datasets: [{
+                            label: 'Vehicle Types',
+                            data: vehicleCounts,
+                            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'], // Colors for each slice
+                            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'], // Border colors for each slice
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(tooltipItem) {
+                                        // Display the percentage in the tooltip
+                                        let percentage = ((tooltipItem.raw / tooltipItem.dataset._meta[Object.keys(tooltipItem.dataset._meta)[0]].total) * 100).toFixed(2);
+                                        return tooltipItem.label + ': ' + percentage + '%';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            </script>
+            
+      </main>
+      

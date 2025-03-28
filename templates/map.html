@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shipment Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Shipment Map</h2>
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        // Coordinates from Django
+        const senderLat = {{ sender_lat }};
+        const senderLng = {{ sender_lng }};
+        const receiverLat = {{ receiver_lat }};
+        const receiverLng = {{ receiver_lng }};
+
+        // Haversine formula to calculate distance (in kilometers)
+        function haversineDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371; // Earth radius in km
+            const toRad = deg => deg * Math.PI / 180;
+
+            const dLat = toRad(lat2 - lat1);
+            const dLon = toRad(lon2 - lon1);
+            const a = Math.sin(dLat / 2) ** 2 +
+                      Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+                      Math.sin(dLon / 2) ** 2;
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return (R * c).toFixed(2); // Distance in km
+        }
+
+        const distance = haversineDistance(senderLat, senderLng, receiverLat, receiverLng);
+
+        // Initialize map
+        const map = L.map('map').setView([senderLat, senderLng], 5);
+
+        // Add tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add markers
+        const senderMarker = L.marker([senderLat, senderLng]).addTo(map).bindPopup('Sender').openPopup();
+        const receiverMarker = L.marker([receiverLat, receiverLng]).addTo(map).bindPopup('Receiver');
+
+        // Draw a line between sender and receiver
+        const routeLine = L.polyline([
+            [senderLat, senderLng],
+            [receiverLat, receiverLng]
+        ], {
+            color: 'blue',
+            weight: 2,
+            opacity: 0.7,
+            smoothFactor: 1
+        }).addTo(map);
+
+        // Fit map to the line
+        map.fitBounds(routeLine.getBounds());
+
+        // Show distance on page
+        const distanceDiv = document.createElement("div");
+        distanceDiv.style.marginTop = "20px";
+        distanceDiv.innerHTML = `<h3 style="text-align:center;">📏 Distance: ${distance} km</h3>`;
+        document.body.appendChild(distanceDiv);
+    </script>
+</body>
+</html>

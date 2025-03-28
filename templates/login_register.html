@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer & Manager Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,108,1) 35%, rgba(0,245,255,1) 100%);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+    }
+    .card-header {
+      background: #007bff;
+      color: #fff;
+      padding: 15px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="container">
+      <!-- Customer Login Card -->
+      <div class="card" style="box-shadow:10px 10px 10px rgba(0,0,0,0.5);width:400px">
+        <div class="card-header">
+          <h2>Login as Customer </h2>
+        </div>
+        <div class="card-body">
+
+            <img src="{% static 'img/user1.jpg'%}" alt="" width="100px" height="100 px">
+            <a href="/customerlogin/"><button type="submit">Login</button></a>
+        </div>
+      </div>
+
+      <!-- Manager Login Card -->
+      <div class="card" style="box-shadow:10px 10px 10px rgba(0,0,0,0.5);width:400px">
+        <div class="card-header">
+          <h2>Login as Manager</h2>
+        </div>
+        <div class="card-body">
+            <img src="{% static 'img/manager.png'%}" alt="" width="100px" height="100 px">
+            <a href="/managerlogin/"><button type="submit">Login</button></a>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Styles -->
+  
+</body>
+</html>

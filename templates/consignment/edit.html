@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+	<meta charset="UTF-8">
+	<meta name="language" content="en">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <title>FedEx - Logistics Company</title>
+
+	<script src="https://use.fontawesome.com/6e42fc46b0.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	{% comment %} <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> {% endcomment %}
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/customerdashboard.css' %}">
+    
+
+</head>
+<body>
+	
+<header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-white custom-nav">
+		<i class="fa fa-bars mobile-menu"></i>
+ 		 <a class="navbar-brand" href="#">FedEx</a>
+		  	<form class="form-inline search-form">
+		  		<i class="fa fa-search"></i>
+		      <input class="form-control " type="search" placeholder="Search..." >
+		    </form>
+		    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+			     <li class="drop">
+				      <a class="nav-link bell-icon-badge" href="#">
+			        	<i class="fa fa-bell-o" aria-hidden="true"></i>
+			        	<span class="bell-badge">10</span>
+			        </a>
+
+				      <ul class="drop-menu">
+				        <li><a href="#">Art</a></li>
+				        <li><a href="">Coding</a></li>
+				        <li><a href="">Design</a></li>
+				        <li><a href="">Web Development</a></li>
+				    </ul>
+				</li>
+
+			    <li class="nav-item">
+			        <a class="nav-link user-prfile" href="#">
+			        	<img src="{% static 'img/user1.jpg' %}" alt="">
+			        </a>
+			    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'customlogout' %}">
+                        Logout
+                    </a>
+                </li>
+		</ul>
+	</nav>
+</header>
+
+<div class="container-fluid">
+	<div class="row">
+		<aside class="col-md-2" id="sidebar">
+			<ul class="sidebar-menu">
+				<li>
+					<a href="/customerdashboard/" class="active"> <i class="fa fa-dashboard"></i> Dashboard</a>
+				</li>
+					    
+			</ul>
+		</aside>
+
+		<main class="col-md-10" id="main" style="zoom: 80%">
+
+			<section class="spacethis">
+
+                <div clas="row">
+                    <div clas="col-md-6">
+                        <h3 class="title">Edit Consignment Details
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        </h3>
+                        
+                    </div>
+
+                </div>
+
+
+
+
+                <form action="{% url 'consignment_edit' consignment.id %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+				<div class="row">
+					<div class="col-md-6">
+
+						
+						<div class="md-card" style="box-shadow:10px 10px 10px rgba(0,0,0,0.5)">
+
+                            <div clas="col-md-6" >
+                                <div clas="form-group" >
+                                <label for="fname">Sender:</label><br>
+                                <input type="text" class="form-control" id="sender_name" name="sender_name" value="{{consignment.sender_name}}"><br>
+                                </div>
+
+                                <div clas="form-group" >
+                                    <label for="fname">Receiver:</label><br>
+                                    <input type="text" class="form-control" id="receiver_name" name="receiver_name" value="{{consignment.receiver_name}}"><br>
+                                    </div>
+
+                                    <div clas="form-group" >
+                                        <label for="fname">Weight:</label><br>
+                                        <input type="text" class="form-control" id="weight" name="weight" value="{{consignment.weight}}"><br>
+                                        </div>
+
+                                        <div clas="form-group" >
+                                            <label for="fname">Vehicle:</label><br>
+                                            <select class="form-control select2" name="vehicle" id="vehicle">
+                                                <option value="{{ consignment.vehicle.id }}">{{ consignment.vehicle.model }}</option>
+                                                {% for d in vehicle_data %}
+                                                    <option value="{{ d.id }}">{{ d.model }}</option>
+
+                                                {% endfor %}
+
+
+                                            </select>
+                                            <br>
+
+                                        </div>
+
+                                        <div clas="form-group" >
+                                            <label for="fname">Dispatch Date:</label><br>
+                                            <input type="date" class="form-control" id="dispatch_date" name="dispatch_date" value="{{ consignment.dispatch_date|date:'Y-m-d' }}"><br>
+                                        </div>
+                            
+                                        <div clas="form-group" >
+                                            <label for="fname">Status:</label><br>
+                                            <select class="form-control select2" name="status" id="status" value="{{consignment.status}}">
+                                                <option value="{{consignment.status}}">{{consignment.status}}</option>
+                                                
+                                                <option value="Approved">Approved</option>
+                                                <option value="Pending">Pending</option>
+                                                <option value="Rejected">Rejected</option>
+
+
+                                            </select>
+                                            <br>
+
+                                        </div>
+
+
+                            </div>
+
+                           
+
+
+
+
+						</div>
+						
+					</div>
+                    <div class="col-md-6">
+
+						
+						<div class="md-card" style="box-shadow:10px 10px 10px rgba(0,0,0,0.5)">
+
+                            <div clas="form-group" >
+                                <label for="fname">Sender Address:</label><br>
+                                <textarea class="form-control" id="sender_address" name="sender_address" >{{consignment.sender_address}}</textarea><br>
+
+                            </div>
+                            
+
+                            <div clas="form-group" >
+                                <label for="fname">Receiver Address:</label><br>
+                                <textarea class="form-control" id="receiver_address" name="receiver_address" >{{consignment.receiver_address}}</textarea><br>
+
+                            </div>
+
+                            
+                            <div clas="form-group" >
+                                <label for="fname">Contents:</label><br>
+                                <textarea class="form-control" id="contents" name="contents" >{{consignment.contents}}</textarea><br>
+                                </div>
+
+                                <div clas="form-group" >
+                                    <label for="fname">Driver:</label><br>
+                                    <select class="form-control select2" name="driver" id="driver" >
+                                        <option value="{{ consignment.driver.id }}">{{ consignment.driver.first_name }} {{ consignment.driver.last_name }}</option>
+                                        {% for v in driver_data %}
+                                            <option value="{{ v.id }}">{{ v.first_name }} {{ v.last_name }}</option>
+
+                                        {% endfor %}
+
+
+                                    </select>
+                                    <br>
+                                </div>
+
+                                <div clas="form-group" >
+                                    <label for="fname">Delivery Date:</label><br>
+                                    <input type="date" class="form-control" id="delivery_date" name="delivery_date" value="{{ consignment.delivery_date|date:'Y-m-d' }}"><br>
+                                </div>
+                            
+
+                           
+                            </div>
+
+
+
+
+						</div>
+						
+					</div>
+                    <br>
+                    <div class="row text-center">
+                        
+
+                        <div class="col-md-4">
+    
+                        </div>
+    
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-success" style="text-align:right">Update</button>
+    
+                        </div>
+    
+                        <div class="col-md-4">
+    
+                        </div>
+    
+    
+    
+    
+    
+                    </div>
+				</div>
+
+
+            </form>
+
+
+			</section>
+
+			
+		</main>
+	</div>
+</div>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/controller.js' %}"></script>
+<script> $('.drop').click(function () {
+    $(this).toggleClass('open').siblings().removeClass('open');
+})
+
+
+
+$('.drop-menu li').each(function() {
+var delay = $(this).index() * 100 + 'ms';
+
+$(this).css({
+    '-webkit-transition-delay': delay,
+    '-moz-transition-delay': delay,
+    '-o-transition-delay': delay,
+    'transition-delay': delay
+});                  
+});
+
+
+
+$('.read-reviews-btn').click(function() {
+$('.read-reviews').slideDown();
+});
+
+
+$('.close-reviews').click(function() {
+$('.read-reviews').slideUp();
+});
+
+$('.mobile-menu ').click(function() {
+$('#sidebar').slideToggle();
+});
+
+$('.search-form .fa-search').click(function() {
+$('.search-form .form-control').slideToggle();
+});</script>
+</body>
+</html>

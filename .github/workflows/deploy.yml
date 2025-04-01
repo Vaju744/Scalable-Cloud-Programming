@@ -18,12 +18,14 @@ jobs:
         mkdir -p ~/.ssh
         echo "${{ secrets.EC2_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+        echo "${{ secrets.EC2_HOST }}" | cut -d '@' -f 2 | xargs -I{} ssh-keyscan -H {} >> ~/.ssh/known_hosts
 
     - name: Deploy to EC2
+      env:
+        PROJECT_DIR: ${{ secrets.PROJECT_DIR }}
       run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_HOST }} << 'EOF'
-          cd ${{ secrets.PROJECT_DIR }}
+        ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_HOST }} << EOF
+          cd $PROJECT_DIR
           git pull origin main
           source venv/bin/activate
           pip install -r requirements.txt

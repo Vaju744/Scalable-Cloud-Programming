@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Shipment Map</title>
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-sA+z0ymr38Y2S5yZ+T1DhwcUJ4cJ4mS+b3wC1fE8xwY=" crossorigin=""/>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-o9N1jz7kS1tliXNnLcfHlcniM7pMb0TXAZknnG+Y+9E=" crossorigin=""></script>
 
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
         #map {
-            height: 500px;
-            width: 100%;
+            height: 80vh;
+            margin: 20px auto;
+            width: 90%;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        #distance {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h2 style="text-align: center;">Shipment Map</h2>
+    <h1>Shipment Map</h1>
     <div id="map"></div>
-
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <div id="distance"></div>
 
     <script>
-        // Coordinates from Django
+        // Coordinates from Django context
         const senderLat = {{ sender_lat }};
         const senderLng = {{ sender_lng }};
         const receiverLat = {{ receiver_lat }};
         const receiverLng = {{ receiver_lng }};
 
-        // Haversine formula to calculate distance (in kilometers)
+        // Calculate Haversine distance
         function haversineDistance(lat1, lon1, lat2, lon2) {
             const R = 6371; // Earth radius in km
             const toRad = deg => deg * Math.PI / 180;
@@ -40,7 +59,7 @@
                       Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
                       Math.sin(dLon / 2) ** 2;
             const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-            return (R * c).toFixed(2); // Distance in km
+            return (R * c).toFixed(2);
         }
 
         const distance = haversineDistance(senderLat, senderLng, receiverLat, receiverLng);
@@ -48,7 +67,7 @@
         // Initialize map
         const map = L.map('map').setView([senderLat, senderLng], 5);
 
-        // Add tile layer
+        // Add OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
@@ -57,25 +76,19 @@
         const senderMarker = L.marker([senderLat, senderLng]).addTo(map).bindPopup('Sender').openPopup();
         const receiverMarker = L.marker([receiverLat, receiverLng]).addTo(map).bindPopup('Receiver');
 
-        // Draw a line between sender and receiver
-        const routeLine = L.polyline([
-            [senderLat, senderLng],
-            [receiverLat, receiverLng]
-        ], {
+        // Draw route line
+        const routeLine = L.polyline([[senderLat, senderLng], [receiverLat, receiverLng]], {
             color: 'blue',
             weight: 2,
             opacity: 0.7,
             smoothFactor: 1
         }).addTo(map);
 
-        // Fit map to the line
+        // Zoom to fit route
         map.fitBounds(routeLine.getBounds());
 
-        // Show distance on page
-        const distanceDiv = document.createElement("div");
-        distanceDiv.style.marginTop = "20px";
-        distanceDiv.innerHTML = `<h3 style="text-align:center;">📏 Distance: ${distance} km</h3>`;
-        document.body.appendChild(distanceDiv);
+        // Show distance
+        document.getElementById('distance').innerHTML = `<h3>📏 Distance: ${distance} km</h3>`;
     </script>
 </body>
 </html>

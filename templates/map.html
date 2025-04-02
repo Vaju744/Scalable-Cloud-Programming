@@ -5,13 +5,11 @@
     <title>Shipment Map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-          integrity="sha256-sA+z0ymr38Y2S5yZ+T1DhwcUJ4cJ4mS+b3wC1fE8xwY=" crossorigin=""/>
+    <!-- Leaflet CSS (no integrity) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-o9N1jz7kS1tliXNnLcfHlcniM7pMb0TXAZknnG+Y+9E=" crossorigin=""></script>
+    <!-- Leaflet JS (no integrity) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <style>
         body {
@@ -42,17 +40,15 @@
     <div id="distance"></div>
 
     <script>
-        // Coordinates from Django context
-        const senderLat = {{ sender_lat }};
-        const senderLng = {{ sender_lng }};
-        const receiverLat = {{ receiver_lat }};
-        const receiverLng = {{ receiver_lng }};
+        // TEMP hardcoded coordinates for local testing
+        const senderLat = 17.385044;
+        const senderLng = 78.486671;
+        const receiverLat = 53.349805;
+        const receiverLng = -6.26031;
 
-        // Calculate Haversine distance
         function haversineDistance(lat1, lon1, lat2, lon2) {
-            const R = 6371; // Earth radius in km
+            const R = 6371;
             const toRad = deg => deg * Math.PI / 180;
-
             const dLat = toRad(lat2 - lat1);
             const dLon = toRad(lon2 - lon1);
             const a = Math.sin(dLat / 2) ** 2 +
@@ -64,19 +60,15 @@
 
         const distance = haversineDistance(senderLat, senderLng, receiverLat, receiverLng);
 
-        // Initialize map
         const map = L.map('map').setView([senderLat, senderLng], 5);
 
-        // Add OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        // Add markers
-        const senderMarker = L.marker([senderLat, senderLng]).addTo(map).bindPopup('Sender').openPopup();
-        const receiverMarker = L.marker([receiverLat, receiverLng]).addTo(map).bindPopup('Receiver');
+        L.marker([senderLat, senderLng]).addTo(map).bindPopup('Sender').openPopup();
+        L.marker([receiverLat, receiverLng]).addTo(map).bindPopup('Receiver');
 
-        // Draw route line
         const routeLine = L.polyline([[senderLat, senderLng], [receiverLat, receiverLng]], {
             color: 'blue',
             weight: 2,
@@ -84,10 +76,8 @@
             smoothFactor: 1
         }).addTo(map);
 
-        // Zoom to fit route
         map.fitBounds(routeLine.getBounds());
 
-        // Show distance
         document.getElementById('distance').innerHTML = `<h3>📏 Distance: ${distance} km</h3>`;
     </script>
 </body>

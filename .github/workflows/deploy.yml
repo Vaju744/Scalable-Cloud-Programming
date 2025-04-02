@@ -21,11 +21,11 @@ jobs:
         echo "${{ secrets.EC2_HOST }}" | cut -d '@' -f 2 | xargs -I{} ssh-keyscan -H {} >> ~/.ssh/known_hosts
 
     - name: Deploy to EC2
-      env:
-        PROJECT_DIR: ${{ secrets.PROJECT_DIR }}
       run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_HOST }} << EOF
-          cd $PROJECT_DIR
+        ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_HOST }} << 'EOF'
+          cd /home/ec2-user/Scalable-Cloud-Programming
+          git reset --hard
+          git clean -fd
           git pull origin main
           source venv/bin/activate
           pip install -r requirements.txt

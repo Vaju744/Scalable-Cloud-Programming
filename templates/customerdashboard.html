@@ -65,7 +65,11 @@
 				<li>
 					<a href="/consignment_index/"> <i class="fa fa-list" aria-hidden="true"></i>Consignments</a>
 				</li>
+				<li>
+					<a href="https://ter7kwd4rj.execute-api.eu-west-1.amazonaws.com/mechanics" target="_blank"> <i class="fa fa-wrench" aria-hidden="true"></i>Mechanic Assistance</a>
+				</li>
 			</ul>
+			
 		</aside>
 
 		<main class="col-md-10" id="main">
@@ -110,10 +114,18 @@
 				<div class="row mt-5">
 					<div class="col-md-12 text-center">
 						<a href="{% url 'map-form' %}" class="btn btn-primary btn-lg" style="box-shadow: 5px 5px 15px rgba(0,0,0,0.3); border-radius: 8px;">
-							🌍 Track Shipment on Map
+							Track Shipment on Map
 						</a>
 					</div>
 				</div>
+				<!-- 🛠️ Mechanic Assistance Button -->
+                <div class="row mt-3">
+                    <div class="col-md-12 text-center">
+                        <a href="https://ter7kwd4rj.execute-api.eu-west-1.amazonaws.com/mechanics" target="_blank" class="btn btn-danger btn-lg" style="box-shadow: 5px 5px 15px rgba(0,0,0,0.3); border-radius: 8px;">
+                            🛠️ Get Mechanic Assistance
+                        </a>
+                    </div>
+                </div>
 			</section>
 		</main>
 	</div>

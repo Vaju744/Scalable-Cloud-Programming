@@ -470,3 +470,12 @@ def get_feedback(request):
     serializer = FeedbackSerializer(feedback, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
     
+def mechanic_assistance(request):
+    try:
+        response = requests.get("https://ter7kwd4rj.execute-api.eu-west-1.amazonaws.com/mechanics")
+        mechanics = response.json()
+    except Exception as e:
+        mechanics = []
+        print("Error fetching mechanics:", str(e))
+
+    return render(request, 'mechanic_assistance.html', {'mechanics': mechanics})

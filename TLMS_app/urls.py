@@ -41,6 +41,8 @@ urlpatterns = [
     
     path("map-form/", views.show_map_form, name="map-form"),
     path("map/", views.map_view, name="map-page"),
+    path('mechanic-assistance/', views.mechanic_assistance, name='mechanic_assistance'),
+
 
 
 

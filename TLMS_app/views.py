@@ -1,4 +1,5 @@
 import requests
+import logging
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
@@ -414,34 +415,47 @@ def map_view(request):
     sender_address = request.GET.get("sender_address")
     receiver_address = request.GET.get("receiver_address")
 
+    print(">>> Raw sender_address:", sender_address)
+    print(">>> Raw receiver_address:", receiver_address)
+
     def fetch_coordinates(address):
-        url = "https://nominatim.openstreetmap.org/search"
-        params = {
-            "q": address,
-            "format": "json",
-            "limit": 1
-        }
-        headers = {
-            "User-Agent": "DjangoApp/1.0 (x23325666@student.ncirl.ie)"
-        }
-        response = requests.get(url, params=params, headers=headers)
-        data = response.json()
-        if data:
-            return float(data[0]["lat"]), float(data[0]["lon"])
+        if not address:
+            print(">>> No address provided to fetch_coordinates.")
+            return None, None
+        try:
+            url = "https://nominatim.openstreetmap.org/search"
+            params = {
+                "q": address,
+                "format": "json",
+                "limit": 1
+            }
+            headers = {
+                "User-Agent": "DjangoApp/1.0 (x23325666@student.ncirl.ie)"
+            }
+            response = requests.get(url, params=params, headers=headers, timeout=5)
+            data = response.json()
+            print(f">>> Fetched data for {address}:", data)
+            if data:
+                return float(data[0]["lat"]), float(data[0]["lon"])
+        except Exception as e:
+            print(f">>> Error fetching coordinates for {address}: {e}")
         return None, None
 
-    sender_lat, sender_lng = fetch_coordinates(sender_address) if sender_address else (None, None)
-    receiver_lat, receiver_lng = fetch_coordinates(receiver_address) if receiver_address else (None, None)
+    sender_lat, sender_lng = fetch_coordinates(sender_address)
+    receiver_lat, receiver_lng = fetch_coordinates(receiver_address)
+
+    print(">>> Final Coordinates:")
+    print("Sender:", sender_lat, sender_lng)
+    print("Receiver:", receiver_lat, receiver_lng)
 
     context = {
-        "sender_lat": sender_lat or 40.7128,
-        "sender_lng": sender_lng or -74.0060,
-        "receiver_lat": receiver_lat or 34.0522,
-        "receiver_lng": receiver_lng or -118.2437,
+        "sender_lat": sender_lat if sender_lat else 40.7128,
+        "sender_lng": sender_lng if sender_lng else -74.0060,
+        "receiver_lat": receiver_lat if receiver_lat else 34.0522,
+        "receiver_lng": receiver_lng if receiver_lng else -118.2437,
     }
 
     return render(request, "map.html", context)
-
 @api_view(['POST'])
 def submit_feedback(request):
     """Handles user feedback submission with debugging"""

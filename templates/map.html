@@ -5,10 +5,10 @@
     <title>Shipment Map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Leaflet CSS (no integrity) -->
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-    <!-- Leaflet JS (no integrity) -->
+    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <style>
@@ -40,11 +40,10 @@
     <div id="distance"></div>
 
     <script>
-        // TEMP hardcoded coordinates for local testing
-        const senderLat = 17.385044;
-        const senderLng = 78.486671;
-        const receiverLat = 53.349805;
-        const receiverLng = -6.26031;
+        const senderLat = {{ sender_lat|default:0 }};
+        const senderLng = {{ sender_lng|default:0 }};
+        const receiverLat = {{ receiver_lat|default:0 }};
+        const receiverLng = {{ receiver_lng|default:0 }};
 
         function haversineDistance(lat1, lon1, lat2, lon2) {
             const R = 6371;
